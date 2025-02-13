@@ -1,0 +1,29 @@
+@theme "/home/ruixi/.config/rofi/themes/nord-ruixi.rasi"
+
+configuration {
+	modi: "drun,filebrowser,window";
+	show-icons: true;
+
+	window-match-fields: "title,class,role,name,desktop";
+	window-command: "wmctrl -i -R {window}";
+	window-format: "{w} - {c} - {t:0}";
+	window-thumbnail: false;
+
+	/*---------- Run settings ----------*/
+	run-command: "{cmd}";
+	run-list-command: "";
+	run-shell-command: "{terminal} -e {cmd}";
+
+	/*---------- File browser settings ----------*/
+    filebrowser {
+	  directory: "/home";
+      directories-first: true;
+      sorting-method:    "name";
+    }
+
+    /*---------- History and Sorting ----------*/
+	disable-history: false;
+	sorting-method: "normal";
+	max-history-size: 25;
+
+}
